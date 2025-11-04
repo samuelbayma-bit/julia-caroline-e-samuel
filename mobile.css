@@ -3,3 +3,10 @@ body {
     font-family: Arial, sans-serif;
     background: #fff;
 }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+}
