@@ -142,3 +142,21 @@ header img.logo {
     border-radius: 10px;
     margin-bottom: 5px;
 }
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.post-actions div {
+    text-align: center;
+    font-size: 11px;
+    color: #000;
+}
+
+.post-actions div img {
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin: 0 auto 3px auto;
+}
