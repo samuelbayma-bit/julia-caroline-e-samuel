@@ -1,291 +1,178 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instagram Clone</title>
-<style>
-
 body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #fff;
-    }
-     
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
 header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 15px;
-        border-bottom: 1px solid #ccc;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+}
 
-    header img.logo {
-        height: 35px;
-    }
+header img.logo {
+    height: 35px;
+}
+
 .search-bar {
-        display: flex;
-        align-items: center;
-        background: #f0f0f0;
-        border-radius: 20px;
-        padding: 5px 10px;
-        flex: 1;
-        margin: 0 10px;
-    }
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 10px;
+    flex: 1;
+    margin: 0 10px;
+}
 
-    .search-bar img {
-        width: 15px;
-        height: 15px;
-    }
+.search-bar img {
+    width: 15px;
+    height: 15px;
+}
 
-    .search-bar input {
-        border: none;
-        background: transparent;
-        outline: none;
-        margin-left: 5px;
-        width: 100%;
-        font-size: 14px;
-    }
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: 5px;
+    width: 100%;
+    font-size: 14px;
+}
 
-    
-    .stories {
-        display: flex;
-        justify-content: space-around;
-        padding: 15px 0;
-        border-bottom: 1px solid #ccc;
-    }
+.stories {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
 
-    .story {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 11px;
-        text-align: center;
-        width: 70px;
-    }
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    text-align: center;
+    width: 70px;
+}
 
-    .story img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-        border: 3px solid #000;
-    }
- .options {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
-        margin-top: 10px;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 10px;
-    }
+.story img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #000;
+}
 
-    .option {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 12px;
-    }
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
 
-    .option span {
-        font-size: 25px;
-        margin-bottom: 5px;
-    }
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
 
-    .post {
-        padding: 15px;
-    }
+.option span {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
 
-    .post-user {
-        display: flex;
-        align-items: center;
-        margin-bottom: 5px;
-        font-weight: bold;
-        font-size: 14px;
-    }
+.post {
+    padding: 15px;
+}
 
-    .post-user img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
-    }
+.post-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
 
+.post-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
 
-    .post-music {
-        display: flex;
-        align-items: center;
-        font-size: 12px;
-        color: #555;
-        margin-bottom: 10px;
-    }
+.post-music {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 10px;
+}
 
-    .post-music img {
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
-    }
+.post-music img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
 
-    .post img.post-img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 5px;
-    }
+.post img.post-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
 
-    .post-actions {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 5px;
-    }
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
 
-    .post-actions div {
-        text-align: center;
-        font-size: 11px;
-        color: #000;
-    }
+.post-actions div {
+    text-align: center;
+    font-size: 11px;
+    color: #000;
+}
 
-    .post-actions div img {
-        width: 18px;
-        height: 18px;
-        display: block;
-        margin: 0 auto 3px auto;
-    }
+.post-actions div img {
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin: 0 auto 3px auto;
+}
 
-   
-    nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border-top: 1px solid #ccc;
-        padding: 5px 0 15px 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background: #fff;
-        flex-direction: column;
-    }
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 5px 0 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+}
 
-    nav .nav-icons {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
+nav .nav-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 
-    nav .nav-icons div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 10px;
-        color: #000;
-    }
+nav .nav-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: #000;
+}
 
-    nav .nav-icons div img {
-        width: 25px;
-        height: 25px;
-        margin-bottom: 3px;
-    }
-</style>
-</head>
-<body>
-
-    <header>
-    <img src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-noir.png" alt="Instagram" class="logo">
-    <div class="search-bar">
-        <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search">
-        <input type="text" placeholder="Pesquisar">
-    </div>
-    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="mic" width="25">
-</header>
-<div class="stories">
-    <div class="story">
-        <img src="https://pbs.twimg.com/media/G1DFgPBbYAARaCC.jpg" alt="">
-    </div>
-    <div class="story">
-        <img src="https://i.pinimg.com/736x/76/21/c4/7621c4aba8d16065242494ca15c7f1e9.jpg" alt="">
-    </div>
-    <div class="story">
-        <img src="https://i.pinimg.com/736x/68/09/b1/6809b15101c3cf521570a3092318ce1f.jpg" alt="">
-    </div> 
-    <div class="story">
-        <img src="https://i.pinimg.com/1200x/9f/2b/f9/9f2bf9418bf23ddafd13c3698043c05d.jpg" alt="">
-    </div>
-</div>
-<section class="options">
-    <div class="option">
-        <span>&#x1F46A;</span>
-        <p>Ver fotos da família</p>
-    </div>
-    <div class="option">
-        <span>&#x1F4F7;</span>
-        <p>Ver vídeos de receitas/engraçados</p>
-    </div>
-    <div class="option">
-        <span>&#x1F4DE;</span>
-        <p>Mandar mensagens e ligar</p>
-    </div>
-    <div class="option">
-        <span>&#x1F50A;</span>
-        <p>Ajuda em forma de áudio</p>
-    </div>
-</section>
-
-<div class="post">
-    <div class="post-user">
-        <img src="https://i.pinimg.com/736x/e0/51/9e/e0519efc2ab6f5d7f6e83f0f8416f97d.jpg" alt="">
-        eduardo_miaumiau
-    </div>
-    <div class="post-music">
-        <img src="https://cdn-icons-png.flaticon.com/512/727/727218.png" alt="music">
-        schism - tool
-    </div>
-    <img class="post-img" src="https://i.pinimg.com/1200x/bb/00/fb/bb00fbabd0a58d0bc918cb8bd5664837.jpg" alt="post cat">
-    <div class="post-actions">
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="like">
-            Curtir
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png" alt="comment">
-            Comentar
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/60/60577.png" alt="save">
-            Salvar
-        </div>
-    </div>
-</div>
-<nav>
-    <div class="nav-icons">
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="home">
-            <span>Início</span>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search">
-            <span>Buscar</span>
-        </div>
-        <div>
-            <nav>
-    <div class="nav-icons">
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="home">
-            <span>Início</span>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search">
-            <span>Buscar</span>
-        </div>
-        <div>
-              <img src="https://cdn-icons-png.flaticon.com/512/725/725643.png" alt="videos">
-            <span>Reels</span>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/61/61112.png" alt="message">
-            <span>Direct</span>
-        </div>
-    </div>
-</nav>
-
-</body>
-</html>
+nav .nav-icons div img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 3px;
+}
