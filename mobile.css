@@ -176,3 +176,9 @@ nav .nav-icons div img {
     height: 25px;
     margin-bottom: 3px;
 }
+
+@media screen and (min-width: 600px) {
+    nav {
+        flex-direction: row;
+    }
+}
