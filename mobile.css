@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background: #fff;
 }
+
 header {
     display: flex;
     align-items: center;
@@ -174,4 +175,10 @@ nav .nav-icons div img {
     width: 25px;
     height: 25px;
     margin-bottom: 3px;
+}
+
+@media screen and (min-width: 600px) {
+    nav {
+        flex-direction: row;
+    }
 }
